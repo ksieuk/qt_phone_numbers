@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Измените данные прямо здесь!</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{background-color:rgb(243, 243, 248);}
+
+QScrollBar:vertical, QScrollBar:horizontal{
+	border: none;
+	background-color: rgb(243, 243, 248);
+	width: 6px;
+	margin: 0px 0 0px 0;
+	border-radius: 0px;
+}
+
+QScrollBar::handle::vertical, QScrollBar::handle::horizontal{
+	background-color: rgb(202, 203, 213);
+	width: 3px;
+	border-radius: 3px;
+}
+
+QScrollBar::handle::vertical:hover, QScrollBar::handle::horizontal:hover{
+	background-color: rgb(202, 203, 213);
+}
+
+QScrollBar::handle::vertical:pressed, QScrollBar::handle::horizontal:pressed{
+	background-color:rgb(129, 136, 188);
+}
+
+QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal{
+	border: none;
+	background-color: rgb(243, 243, 248);
+	height: 8px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line::vertical:hover, QScrollBar::sub-line::horizontal:hover{
+	background-color: rgb(202, 203, 213);
+}
+
+QScrollBar::sub-line::vertical:pressed, QScrollBar::sub-line::horizontal:pressed{
+	background-color:rgb(129, 136, 188);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal{
+	border: none;
+	background-color: rgb(243, 243, 248);
+	height: 8px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::add-line::vertical:hover, QScrollBar::add-line::horizontal:hover{
+	background-color: rgb(202, 203, 213);
+}
+
+QScrollBar::add-line::vertical:pressed, QScrollBar::add-line::horizontal:pressed{
+	background-color:rgb(129, 136, 188);
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical, QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+	background: none;
+}
+
+QScrollBar::ad-page:vertical, QScrollBar::sub-page:vertical, QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+	background: none;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QTableWidget" name="list_table">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+	border: 1px solid rgb(117, 115, 121);
+	gridline-color: rgb(117, 115, 121);
+	border-color:  rgb(117, 115, 121);
+}
+
+QHeaderView::section {
+	color:black;
+	background-color: rgb(202, 203, 213);
+	border-style: none;
+	border-bottom: 1px solid rgb(156, 154, 161);
+	border-right: 1px solid rgb(156, 154, 161);
+	height: 30px;
+	text-align: center;
+}
+
+QTableView {
+    color: black;
+	border: 1px solid  rgb(156, 154, 161);
+    gridline-color:  rgb(156, 154, 161);
+    border-color:  rgb(156, 154, 161);
+	selection-background-color: rgb(129, 136, 188);
+    font-size: 9pt;
+}
+
+
+</string>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>100</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Значение</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="button_list_ok">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+    color: black;
+	width: 80px;
+	height: 35px;
+	background-color: rgb(202, 203, 213);
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+	background-color:rgb(182, 184, 202);
+}
+
+QPushButton:pressed {
+    background-color: rgb(129, 136, 188);    
+}</string>
+       </property>
+       <property name="text">
+        <string>Готово</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_list_delete">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+    color: black;
+	width: 80px;
+	height: 35px;
+	background-color: rgb(202, 203, 213);
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+	background-color:rgb(182, 184, 202);
+}
+
+QPushButton:pressed {
+    background-color: rgb(129, 136, 188);    
+}</string>
+       </property>
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_list_apply">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+    color: black;
+	width: 80px;
+	height: 35px;
+	background-color: rgb(202, 203, 213);
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+	background-color:rgb(182, 184, 202);
+}
+
+QPushButton:pressed {
+    background-color: rgb(129, 136, 188);    
+}</string>
+       </property>
+       <property name="text">
+        <string>Применить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
